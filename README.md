@@ -23,4 +23,14 @@ void printString(string s);  <br>
 文件名为Printer.ice(可用记事本写，注意脚本的扩展名，将.txt去掉)<br>
 然后运行cmd，切换到Printer.ice所在的目录，运行slice2java Printer.ice<br>
 将demo文件夹中生成的类复制到项目中<br>
-
+<br>
+如果传输的是对象时，可定义结构，但不可以传数组，列表<br>
+module demo { <br>
+struct Person{<br>
+string name;<br>
+int age;<br>
+};<br>
+interface Printer {<br>
+void printString(Person s);  <br>
+}; <br>
+}; <br>
